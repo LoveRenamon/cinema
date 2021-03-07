@@ -45,9 +45,15 @@ function RemoveRequestById( id )
 	return Query( "DELETE FROM cinema_requests WHERE id=" .. id )
 end
 
-function GetRequestHistory()
+function GetRequestHistory(filter)
 
-	local results = Query( "SELECT * FROM cinema_requests" ) or {}
+	local q = "SELECT * FROM cinema_requests"
+
+	if filter and filter ~= "" then
+		q = q .. " WHERE title LIKE '%" .. sql.SQLStr(filter,true) .. "%'"
+	end
+
+	local results = Query(q) or {}
 
 	if #results > 0 then
 		results.duration = tonumber(results.duration)
@@ -68,7 +74,7 @@ local function CheckDuplicates(url, title, duration, vtype, data)
 	local count = 0
 
 	if results and #results > 1 then -- Check for multiple entries for same video type and data
-		print("Duplicate entries in 'cinema_requests' for type=" ..vtype.. " and data=" ..data.. ", fixing...")
+		print("Duplicate entries in 'cinema_requests' for type=" .. vtype .. " and data=" .. data .. ", fixing...")
 		for vidkey, vid in pairs(results) do
 			count = count + vid.count
 			if vidkey > 1 then -- Don't delete the first entry!
