@@ -1,0 +1,9 @@
+"Gamemode"
+{
+	"base"			"base"
+	"title"			"Cinema (Fixed Edition)"
+	"menusystem" 	"1"
+	"maps" 			"theater|theater_|cinema_"
+	"category"	"other"
+	"workshopid"	"2419005587"
+}

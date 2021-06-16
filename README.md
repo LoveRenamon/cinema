@@ -1,11 +1,12 @@
+[![CF](https://www.cloudflare.com/media/images/web-badges/cf-web-badges-f-1.png)](https://pages.cloudflare.com/)
+
 Cinema
 ======
 
 Cinema is a gamemode for Garry's Mod 13 which features synchronized video playback.
 
-#### Features ####
+#### Legacy Features ####
 * Synchronized video playback
-* Support for YouTube, Vimeo, Justin.TV, Twitch.TV, Livestream, and Blip
 * Intuitive video request system
 * Persistant video history
 * Private theater owner controls
@@ -13,8 +14,24 @@ Cinema is a gamemode for Garry's Mod 13 which features synchronized video playba
 * Useable Seats
 * Support for additional maps
 
+#### New Features ####
+* Almost all services without API.
+* Video History pagination.
+* Livestreams can be played anywhere
+* Dailymotion & Archive support
+
+#### Supported Services ####
+* Youtube & YouTube Live
+* Twitch Livestream
+* Archive.org
+* Dailymotion
+* Vimeo
+<sub>
+Minimum requirement for YouTube streaming only is x86-64 beta branch, otherwise CEF codec fix is needed
+</sub>
 
 #### Links ####
-* [Facepunch Thread](http://www.facepunch.com/showthread.php?t=1237719)
-* [Steam Workshop](http://steamcommunity.com/sharedfiles/filedetails/?id=118824086)
-* [Official Website] (http://www.pixeltailgames.com/cinema)
+* [Steam Workshop (Fixed edition)](https://steamcommunity.com/sharedfiles/filedetails/?id=2419005587)
+* [Steam Workshop (Original)](https://steamcommunity.com/sharedfiles/filedetails/?id=118824086)
+* [PixelTail Games Website](https://www.pixeltailgames.com/cinema)
+* [Original GitHub Repo](https://github.com/pixeltailgames/cinema)
